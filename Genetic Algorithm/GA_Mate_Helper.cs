@@ -28,7 +28,7 @@ namespace Genetic_Algorithm_Template
                         switchedGene;
                 }
             }
-            if (rnd.Next(odds) == 0) child = MutateGenes(child, alwaysMutate, odds);
+            if (rnd.Next(odds) == 0) child = MutateGenes(child, true, odds);
             return child;
         }
 
