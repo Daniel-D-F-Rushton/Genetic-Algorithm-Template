@@ -6,7 +6,8 @@ requirements set in the IProblem interface, (let's call it MyProblem). Then init
 
 ################ Reuired  
 GeneticAlgorithm MyGA = new();    
-MyGA.Set_Problem(new MyProblem);
+MyGA.Set_Problem(new MyProblem);  
+MyGA.Start();  
   
   
 ############ Optional and modifyable at runtime  
@@ -26,8 +27,6 @@ MyGA.Set_PopulationSize(16);
   
 ###############
 
-MyGA.Start();  
-// Starts the GA
 
 MyGA.Stop();  
 // Stops the GA, (at the end of the current generation for neatness.)
