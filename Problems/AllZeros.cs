@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace Genetic_Algorithm_Template
 {
     public class AllZeros : IProblem
