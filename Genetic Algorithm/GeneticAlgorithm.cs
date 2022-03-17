@@ -22,7 +22,8 @@ namespace Genetic_Algorithm_Template
         public event EventHandler E_GenerationComplete;
         internal void Call_EGenerationComplete()
         {
-            E_GenerationComplete?.Invoke(CurrentGeneration, EventArgs.Empty);
+            var sender = (CurrentGeneration, CurrentBest);
+            E_GenerationComplete?.Invoke(sender, EventArgs.Empty);
         }
 
         /// <summary> This is called in the problem is improved upon </summary>
