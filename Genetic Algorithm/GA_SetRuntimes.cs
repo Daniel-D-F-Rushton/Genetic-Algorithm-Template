@@ -1,3 +1,5 @@
+using System.Linq;
+
 namespace Genetic_Algorithm_Template
 {
     static public class GA_SetRuntimes
@@ -12,5 +14,13 @@ namespace Genetic_Algorithm_Template
             GA.Problem = problem;
             GA.GeneticsSize = problem.GeneSize;
         }
+
+        static public void Reset_GA(this GeneticAlgorithm GA)
+        {
+            GA.CurrentBest = 1000000;
+            GA.CurrentGeneration = 0;
+        }
+
+        static public int Get_Current_Best(this GeneticAlgorithm GA) => GA.Population.Min(x => x.NumberOfErrors);
     }
 }
