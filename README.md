@@ -24,7 +24,14 @@ MyGA.Set_MutationOdds(2);
 MyGA.Set_PopulationSize(16);  
 // How big you want the population to be  
 
-  
+###############
+
+MyGA.Reset_GA()
+// Reset the genenetic algorithm
+
+MyGa.Get_Current_Best
+// Gets the current best (worth) of the population
+
 ###############
 
 
@@ -33,6 +40,6 @@ MyGA.Stop();
 
 
 There are also a few events:  
-E_GenerationComplete ... runs at the end of the generation and holds the generation number in the sender field.  
-E_ImprovementFound ... runs every time there is a new best creature and returns (GeneString, NumberOfErrors) in the sender field.  
-E_AlgorithmSuccessful ... runs if the GA completes and returns the GeneString of the winner in the sender field.
+E_GenerationComplete ... send the number of the generation  
+E_ImprovementFound ... send the gene string of a new improvement  
+E_AlgorithmSuccessful ... sends the genes of the winner
