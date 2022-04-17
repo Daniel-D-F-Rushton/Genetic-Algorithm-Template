@@ -8,6 +8,16 @@ namespace Genetic_Algorithm_Template
     {
         /// <summary>
         /// This is a GA to test R55 = 43?
+        /// It takes a string of 903 binary and checks to see how many collections of five mutual friends,
+        /// or five mutual strangers exists. 
+        /// IE AB, AC, AD, AE, BC, BD, BE, CD, CE, DE == 0
+        /// OR AB, AC, AD, AE, BC, BD, BE, CD, CE, DE == 1
+        /// 
+        /// The intention of the Genetic algorithm is to find a zero error condition providing a counter proof
+        /// to the conjecture that Ramsey 5,5 = 43
+        /// It is presumed that no such correct answer exists.
+        /// 
+        /// 
         /// </summary>
         public int GeneSize { get; set; } = 903;
         public int CalculateErrors(string geneString)
@@ -39,7 +49,6 @@ namespace Genetic_Algorithm_Template
                         }
                     }
                 }
-
             }
             return Worth;
         }
