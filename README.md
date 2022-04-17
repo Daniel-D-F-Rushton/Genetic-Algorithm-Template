@@ -33,6 +33,6 @@ MyGA.Stop();
 
 
 There are also a few events:  
-E_GenerationComplete ... runs at the end of the generation and holds the generation number in the sender field.  
+E_GenerationComplete ... runs at the end of the generation and holds the generation number and current best in the sender field.  
 E_ImprovementFound ... runs every time there is a new best creature and returns (GeneString, NumberOfErrors) in the sender field.  
 E_AlgorithmSuccessful ... runs if the GA completes and returns the GeneString of the winner in the sender field.
