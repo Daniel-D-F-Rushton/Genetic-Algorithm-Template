@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetic Algorithm Template", "Genetic Algorithm Template.csproj", "{95072BBF-C290-4B73-8974-882206317A6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Genetic Algorithm Template", "Genetic Algorithm Template.csproj", "{95072BBF-C290-4B73-8974-882206317A6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Junk Tester", "C:\Users\Danie\source\repos\Junk Tester\Junk Tester.csproj", "{4648F70B-A13D-443B-AD85-2599ACBFD982}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Junk Tester", "C:\Users\Danie\source\repos\Junk Tester\Junk Tester.csproj", "{4648F70B-A13D-443B-AD85-2599ACBFD982}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visual Junk Tester", "C:\Users\Danie\source\repos\Visual Junk Tester\Visual Junk Tester.csproj", "{9C5D9D7D-9E07-47EE-A054-4134A91ABE7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{4648F70B-A13D-443B-AD85-2599ACBFD982}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4648F70B-A13D-443B-AD85-2599ACBFD982}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4648F70B-A13D-443B-AD85-2599ACBFD982}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C5D9D7D-9E07-47EE-A054-4134A91ABE7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C5D9D7D-9E07-47EE-A054-4134A91ABE7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C5D9D7D-9E07-47EE-A054-4134A91ABE7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C5D9D7D-9E07-47EE-A054-4134A91ABE7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
