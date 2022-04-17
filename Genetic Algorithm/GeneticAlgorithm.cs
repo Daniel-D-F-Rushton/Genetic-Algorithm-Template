@@ -22,16 +22,14 @@ namespace Genetic_Algorithm_Template
         public event EventHandler E_GenerationComplete;
         internal void Call_EGenerationComplete()
         {
-            var sender = (CurrentGeneration, CurrentBest);
-            E_GenerationComplete?.Invoke(sender, EventArgs.Empty);
+            E_GenerationComplete?.Invoke(CurrentGeneration, EventArgs.Empty);
         }
 
         /// <summary> This is called in the problem is improved upon </summary>
         public event EventHandler E_ImprovementFound;
         internal void Call_EImprovementFound(string child, int childErrors)
         {
-            var sender = (child, childErrors);
-            E_ImprovementFound?.Invoke(sender, EventArgs.Empty);
+            E_ImprovementFound?.Invoke(child, EventArgs.Empty);
         }
 
         /// <summary> This is called if the problem finds a zero error solultion </summary>
