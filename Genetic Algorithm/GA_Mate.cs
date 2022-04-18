@@ -19,7 +19,8 @@ namespace Genetic_Algorithm_Template
                 }
                 string child = GA_Mate_Helper.MateGenes(GA.Population[mother].GeneticsString, GA.Population[father].GeneticsString);
                 child = GA_Mate_Helper.MutateGenes(child, GA.AlwaysMutate, GA.MutationOdds);
-                int childErrors = GA.Problem.CalculateErrors(child);
+                int childErrors = GA.Problem.CalculateErrors(ref child);
+                GA.Population.Add(new Creature(child, childErrors));
                 if (childErrors < GA.CurrentBest)
                 {
                     GA.Call_EImprovementFound(child, childErrors);
@@ -30,7 +31,6 @@ namespace Genetic_Algorithm_Template
                         GA.Stopped = true;
                     }
                 }
-                GA.Population.Add(new Creature(child, childErrors));
             }
         }
 

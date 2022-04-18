@@ -3,6 +3,6 @@
     public interface IProblem
     {
         public int GeneSize { get; set; }
-        public int CalculateErrors(string geneString);
+        public int CalculateErrors(ref string geneString); // ref to allow modification in test
     }
 }
