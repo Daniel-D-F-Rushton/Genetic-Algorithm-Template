@@ -4,11 +4,11 @@ Genetic Algorithm Template
 This is a simple to use genetic algorithm template. In order to use you simply create your problem class to meet the   
 requirements set in the IProblem interface, (let's call it MyProblem). Then initialise as following.  
 
-################ Reuired  
 GeneticAlgorithm MyGA = new();    
 MyGA.Set_Problem(new MyProblem);  
 MyGA.Start();  
   
+There are currently two example IProblem complient classes in the problems folder. One is a simple convert a string to all 1s, and the second is based on the Ramsey 5,5 problem in mathematics to try and find a counterproof for 43, (presumed to be impossible).
   
 ############ Optional and modifyable at runtime  
 
