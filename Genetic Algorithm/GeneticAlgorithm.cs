@@ -19,24 +19,27 @@ namespace Genetic_Algorithm_Template
         internal IProblem Problem;
 
         /// <summary> This is called at the end of each generation </summary>
-        public event EventHandler E_GenerationComplete;
+        public event EventHandler<EventPass> E_GenerationComplete;
         internal void Call_EGenerationComplete()
         {
-            E_GenerationComplete?.Invoke(CurrentGeneration, EventArgs.Empty);
+            EventPass eventPass = new EventPass(CurrentGeneration, "", -1);
+            E_GenerationComplete?.Invoke(this, eventPass);
         }
 
         /// <summary> This is called in the problem is improved upon </summary>
-        public event EventHandler E_ImprovementFound;
+        public event EventHandler<EventPass> E_ImprovementFound;
         internal void Call_EImprovementFound(string child, int childErrors)
         {
-            E_ImprovementFound?.Invoke(child, EventArgs.Empty);
+            EventPass eventPass = new EventPass(CurrentGeneration, child, childErrors);
+            E_ImprovementFound?.Invoke(this, eventPass);
         }
 
         /// <summary> This is called if the problem finds a zero error solultion </summary>
-        public event EventHandler E_AlgorithmSuccessful;
+        public event EventHandler<EventPass> E_AlgorithmSuccessful;
         internal void Call_EAlgorithmSuccessful(string solution)
         {
-            E_AlgorithmSuccessful?.Invoke(solution, EventArgs.Empty);
+            EventPass eventPass = new EventPass(CurrentGeneration, solution, 0);
+            E_AlgorithmSuccessful?.Invoke(this, eventPass);
         }
     }
 }
