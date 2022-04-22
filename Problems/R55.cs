@@ -39,7 +39,7 @@ namespace Genetic_Algorithm_Template
             
             for (int i = 0; i < 43; i++)
             {
-                modded.Add(holder.Substring(0, i) + geneString.Substring(i * 43 + i, 43 - i));
+                modded.Add(holder[..i] + geneString.Substring(i * 43 + i, 43 - i));
             }
             geneString = "";
             for (int i = 0; i < modded.Count; i++)

@@ -22,7 +22,7 @@ namespace Genetic_Algorithm_Template
             string spare = "000000000000000000000000000000000000000000000000000000000000000000";
             for (int i = 43; i > 0; i--)
             {
-                holder += spare.Substring(0, 43 - i) + geneString.Substring(0, i);
+                holder += spare[..(43 - i)] + geneString[..i];
             }
             geneString = holder;
             int Worth = 0;

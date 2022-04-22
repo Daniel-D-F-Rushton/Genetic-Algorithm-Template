@@ -22,7 +22,7 @@ namespace Genetic_Algorithm_Template
         public event EventHandler<EventPass> E_GenerationComplete;
         internal void Call_EGenerationComplete()
         {
-            EventPass eventPass = new EventPass(CurrentGeneration, "", -1);
+            EventPass eventPass = new(CurrentGeneration, "", -1);
             E_GenerationComplete?.Invoke(this, eventPass);
         }
 
@@ -30,7 +30,7 @@ namespace Genetic_Algorithm_Template
         public event EventHandler<EventPass> E_ImprovementFound;
         internal void Call_EImprovementFound(string child, int childErrors)
         {
-            EventPass eventPass = new EventPass(CurrentGeneration, child, childErrors);
+            EventPass eventPass = new(CurrentGeneration, child, childErrors);
             E_ImprovementFound?.Invoke(this, eventPass);
         }
 
@@ -38,7 +38,7 @@ namespace Genetic_Algorithm_Template
         public event EventHandler<EventPass> E_AlgorithmSuccessful;
         internal void Call_EAlgorithmSuccessful(string solution)
         {
-            EventPass eventPass = new EventPass(CurrentGeneration, solution, 0);
+            EventPass eventPass = new(CurrentGeneration, solution, 0);
             E_AlgorithmSuccessful?.Invoke(this, eventPass);
         }
     }
