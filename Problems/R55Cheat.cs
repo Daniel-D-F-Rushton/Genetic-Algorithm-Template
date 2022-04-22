@@ -8,6 +8,11 @@ namespace Genetic_Algorithm_Template
 {
     public class R55Cheat: IProblem
     {    
+        /// <summary>
+        /// This is the same as the R55, except it makes a specific form of result based on only the top line of the
+        /// adjacency matrix. It cascades the 1s, and 0s down to make a (sort of) symmetrical map. Using this it is easy
+        /// to get the 43 counterproof attemt down to 42 errors - a feat that tends to take many weeks using the R55 alone.
+        /// </summary>
 
         public int GeneSize { get; set; } = 1849;
         public int CalculateErrors(ref string geneString)
